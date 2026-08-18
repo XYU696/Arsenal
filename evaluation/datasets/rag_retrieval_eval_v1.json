@@ -1,0 +1,255 @@
+[
+  {
+    "id": "RAG-001",
+    "query": "EchoMind Pro 年费会员刚买一天，想退订可以吗",
+    "category": "refund_policy",
+    "product": "EchoMind Pro",
+    "expected_doc_ids": ["KB-RP-002", "KB-RP-001"],
+    "note": "Pro 年付政策 + 通用规则"
+  },
+  {
+    "id": "RAG-002",
+    "query": "Pro 月付会员退款时效是多久",
+    "category": "refund_policy",
+    "product": "EchoMind Pro",
+    "expected_doc_ids": ["KB-RP-003"],
+    "note": "Pro 月付 24 小时窗口"
+  },
+  {
+    "id": "RAG-003",
+    "query": "Team 季度套餐退款需要人工审核吗",
+    "category": "refund_policy",
+    "product": "EchoMind Team",
+    "expected_doc_ids": ["KB-RP-004"],
+    "note": "Team 季付人工审核"
+  },
+  {
+    "id": "RAG-004",
+    "query": "智能录音笔 A1 不想要了能退吗",
+    "category": "refund_policy",
+    "product": "智能录音笔 A1",
+    "expected_doc_ids": ["KB-RP-005", "KB-RT-001"],
+    "note": "硬件退款政策 + 退货流程"
+  },
+  {
+    "id": "RAG-005",
+    "query": "会议耳机 H1 退款要什么条件",
+    "category": "refund_policy",
+    "product": "会议耳机 H1",
+    "expected_doc_ids": ["KB-RP-006"],
+    "note": "耳机硬件退款"
+  },
+  {
+    "id": "RAG-006",
+    "query": "企业服务包能不能自动退款",
+    "category": "refund_policy",
+    "product": "Enterprise",
+    "expected_doc_ids": ["KB-RP-007"],
+    "note": "企业包不可自动退款"
+  },
+  {
+    "id": "RAG-007",
+    "query": "退款审核要多久，钱什么时候到账",
+    "category": "refund_policy",
+    "expected_doc_ids": ["KB-RP-008", "KB-RP-001"],
+    "note": "审核与到账时效"
+  },
+  {
+    "id": "RAG-008",
+    "query": "我提交了退款申请还能撤销吗",
+    "category": "refund_policy",
+    "expected_doc_ids": ["KB-RP-009"],
+    "note": "退款撤销"
+  },
+  {
+    "id": "RAG-009",
+    "query": "怎么申请退货",
+    "category": "return_process",
+    "expected_doc_ids": ["KB-RT-001"],
+    "note": "退货申请入口"
+  },
+  {
+    "id": "RAG-010",
+    "query": "退货上门取件要等多久",
+    "category": "return_process",
+    "expected_doc_ids": ["KB-RT-002"],
+    "note": "上门取件时效"
+  },
+  {
+    "id": "RAG-011",
+    "query": "退货寄回去之后什么时候退款",
+    "category": "return_process",
+    "expected_doc_ids": ["KB-RT-003", "KB-RP-008"],
+    "note": "质检后关联退款"
+  },
+  {
+    "id": "RAG-012",
+    "query": "退货运费由谁承担",
+    "category": "return_process",
+    "expected_doc_ids": ["KB-RT-004"],
+    "note": "运费规则"
+  },
+  {
+    "id": "RAG-013",
+    "query": "耳机有问题想换个新的可以吗",
+    "category": "exchange_process",
+    "product": "会议耳机 H1",
+    "expected_doc_ids": ["KB-EX-001", "KB-EX-002"],
+    "note": "换货申请条件"
+  },
+  {
+    "id": "RAG-014",
+    "query": "换货多久能收到新货",
+    "category": "exchange_process",
+    "expected_doc_ids": ["KB-EX-002"],
+    "note": "换货时效与新运单"
+  },
+  {
+    "id": "RAG-015",
+    "query": "换货的商品缺货了怎么办",
+    "category": "exchange_process",
+    "expected_doc_ids": ["KB-EX-003"],
+    "note": "换货缺货降级"
+  },
+  {
+    "id": "RAG-016",
+    "query": "我的包裹显示运输中是什么意思",
+    "category": "logistics_issue",
+    "expected_doc_ids": ["KB-LG-001"],
+    "note": "物流状态解释"
+  },
+  {
+    "id": "RAG-017",
+    "query": "包裹疑似丢了怎么办",
+    "category": "logistics_issue",
+    "expected_doc_ids": ["KB-LG-002"],
+    "note": "丢件处理流程"
+  },
+  {
+    "id": "RAG-018",
+    "query": "仓库爆仓了发货会延迟多久",
+    "category": "logistics_issue",
+    "expected_doc_ids": ["KB-LG-003"],
+    "note": "仓库延迟公告"
+  },
+  {
+    "id": "RAG-019",
+    "query": "收到的耳机配件不对怎么办",
+    "category": "logistics_issue",
+    "product": "会议耳机 H1",
+    "expected_doc_ids": ["KB-LG-004"],
+    "note": "错发配件"
+  },
+  {
+    "id": "RAG-020",
+    "query": "订单为什么被拦截不发货了",
+    "category": "logistics_issue",
+    "expected_doc_ids": ["KB-LG-005", "KB-PI-001"],
+    "note": "售后拦截与重复扣费关联"
+  },
+  {
+    "id": "RAG-021",
+    "query": "上海中转的包裹延误了多久",
+    "category": "logistics_issue",
+    "expected_doc_ids": ["KB-LG-006"],
+    "note": "华东转运延迟公告"
+  },
+  {
+    "id": "RAG-022",
+    "query": "因为发货延迟能给我补偿券吗",
+    "category": "coupon_compensation",
+    "expected_doc_ids": ["KB-CC-001", "KB-CC-002"],
+    "note": "补偿规则"
+  },
+  {
+    "id": "RAG-023",
+    "query": "补偿优惠券有效期多久",
+    "category": "coupon_compensation",
+    "expected_doc_ids": ["KB-CC-002"],
+    "note": "补偿券有效期"
+  },
+  {
+    "id": "RAG-024",
+    "query": "我被重复扣费了怎么处理",
+    "category": "payment_invoice",
+    "expected_doc_ids": ["KB-PI-001", "KB-INC-002"],
+    "note": "重复扣费流程 + 排查公告"
+  },
+  {
+    "id": "RAG-025",
+    "query": "支付失败订单会扣款吗",
+    "category": "payment_invoice",
+    "expected_doc_ids": ["KB-PI-002"],
+    "note": "支付失败处理"
+  },
+  {
+    "id": "RAG-026",
+    "query": "怎么开发票，多久能开好",
+    "category": "payment_invoice",
+    "expected_doc_ids": ["KB-PI-003"],
+    "note": "开票流程"
+  },
+  {
+    "id": "RAG-027",
+    "query": "什么问题会被转人工处理",
+    "category": "after_sales_ticket",
+    "expected_doc_ids": ["KB-AT-001", "KB-AT-003"],
+    "note": "转人工触发条件"
+  },
+  {
+    "id": "RAG-028",
+    "query": "售后工单多久有人处理",
+    "category": "after_sales_ticket",
+    "expected_doc_ids": ["KB-AT-002"],
+    "note": "工单队列与 SLA"
+  },
+  {
+    "id": "RAG-029",
+    "query": "工单显示 in_progress 是什么意思",
+    "category": "after_sales_ticket",
+    "expected_doc_ids": ["KB-AT-003"],
+    "note": "工单状态说明"
+  },
+  {
+    "id": "RAG-030",
+    "query": "账号被临时锁定了是怎么回事",
+    "category": "incident",
+    "expected_doc_ids": ["KB-INC-001"],
+    "note": "登录锁定故障"
+  },
+  {
+    "id": "RAG-031",
+    "query": "最近有重复扣费的故障吗",
+    "category": "incident",
+    "expected_doc_ids": ["KB-INC-002"],
+    "note": "重复扣费排查公告"
+  },
+  {
+    "id": "RAG-032",
+    "query": "售后申请页面一直报 500 错误",
+    "category": "incident",
+    "expected_doc_ids": ["KB-INC-003", "KB-INC-004"],
+    "note": "API 故障 + 通用排查"
+  },
+  {
+    "id": "RAG-033",
+    "query": "登录一直提示 401 怎么办",
+    "category": "incident",
+    "expected_doc_ids": ["KB-INC-004"],
+    "note": "401 排查"
+  },
+  {
+    "id": "RAG-034",
+    "query": "客服能不能承诺退款到账时间",
+    "category": "compliance",
+    "expected_doc_ids": ["KB-CP-001"],
+    "note": "禁止承诺"
+  },
+  {
+    "id": "RAG-035",
+    "query": "客服会向我要密码或验证码吗",
+    "category": "compliance",
+    "expected_doc_ids": ["KB-CP-002"],
+    "note": "隐私边界"
+  }
+]

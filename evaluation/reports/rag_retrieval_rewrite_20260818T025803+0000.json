@@ -1,0 +1,639 @@
+{
+  "dataset": "rag_retrieval_eval_v1.json",
+  "mode": "rewrite",
+  "top_k": 5,
+  "filters_applied": false,
+  "note": "after-rewrite",
+  "created_at": "2026-08-18T02:58:03+00:00",
+  "metrics": {
+    "recall@k": 0.2714,
+    "precision@k": 0.0862,
+    "mrr": 0.2262,
+    "ndcg@k": 0.2165,
+    "filter_compliance": 0.2276,
+    "empty_result_rate": 0.0,
+    "total_cases": 35
+  },
+  "per_case": [
+    {
+      "expected": [
+        "KB-RP-002",
+        "KB-RP-001"
+      ],
+      "retrieved": [
+        "KB-RP-005",
+        "KB-RP-003"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.5,
+      "id": "RAG-001",
+      "query": "EchoMind Pro 年费会员刚买一天，想退订可以吗"
+    },
+    {
+      "expected": [
+        "KB-RP-003"
+      ],
+      "retrieved": [
+        "KB-INC-001",
+        "KB-AT-001",
+        "KB-RT-003"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-002",
+      "query": "Pro 月付会员退款时效是多久"
+    },
+    {
+      "expected": [
+        "KB-RP-004"
+      ],
+      "retrieved": [
+        "KB-AT-001",
+        "KB-RP-005",
+        "KB-EX-003",
+        "KB-RP-003"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-003",
+      "query": "Team 季度套餐退款需要人工审核吗"
+    },
+    {
+      "expected": [
+        "KB-RP-005",
+        "KB-RT-001"
+      ],
+      "retrieved": [
+        "KB-RP-005",
+        "KB-RP-001",
+        "KB-PI-001",
+        "KB-AT-001"
+      ],
+      "recall@k": 0.5,
+      "precision@k": 0.25,
+      "mrr": 1.0,
+      "ndcg@k": 0.6131,
+      "filter_compliance": 0.25,
+      "id": "RAG-004",
+      "query": "智能录音笔 A1 不想要了能退吗"
+    },
+    {
+      "expected": [
+        "KB-RP-006"
+      ],
+      "retrieved": [
+        "KB-LG-004",
+        "KB-RP-007",
+        "KB-RT-001"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-005",
+      "query": "会议耳机 H1 退款要什么条件"
+    },
+    {
+      "expected": [
+        "KB-RP-007"
+      ],
+      "retrieved": [
+        "KB-RP-001"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-006",
+      "query": "企业服务包能不能自动退款"
+    },
+    {
+      "expected": [
+        "KB-RP-008",
+        "KB-RP-001"
+      ],
+      "retrieved": [
+        "KB-EX-003",
+        "KB-RP-005",
+        "KB-AT-001"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.3333333333333333,
+      "id": "RAG-007",
+      "query": "退款审核要多久，钱什么时候到账"
+    },
+    {
+      "expected": [
+        "KB-RP-009"
+      ],
+      "retrieved": [
+        "KB-EX-003",
+        "KB-RT-001",
+        "KB-RP-006",
+        "KB-INC-002",
+        "KB-CP-003"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.2,
+      "id": "RAG-008",
+      "query": "我提交了退款申请还能撤销吗"
+    },
+    {
+      "expected": [
+        "KB-RT-001"
+      ],
+      "retrieved": [
+        "KB-RT-001",
+        "KB-RT-004",
+        "KB-EX-003",
+        "KB-RT-003"
+      ],
+      "recall@k": 1.0,
+      "precision@k": 0.25,
+      "mrr": 1.0,
+      "ndcg@k": 1.0,
+      "filter_compliance": 0.75,
+      "id": "RAG-009",
+      "query": "怎么申请退货"
+    },
+    {
+      "expected": [
+        "KB-RT-002"
+      ],
+      "retrieved": [
+        "KB-RP-005",
+        "KB-RT-002",
+        "KB-RT-001",
+        "KB-RT-004"
+      ],
+      "recall@k": 1.0,
+      "precision@k": 0.25,
+      "mrr": 0.5,
+      "ndcg@k": 0.6309,
+      "filter_compliance": 0.75,
+      "id": "RAG-010",
+      "query": "退货上门取件要等多久"
+    },
+    {
+      "expected": [
+        "KB-RT-003",
+        "KB-RP-008"
+      ],
+      "retrieved": [
+        "KB-RP-009",
+        "KB-PI-003",
+        "KB-RP-006"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-011",
+      "query": "退货寄回去之后什么时候退款"
+    },
+    {
+      "expected": [
+        "KB-RT-004"
+      ],
+      "retrieved": [
+        "KB-INC-001",
+        "KB-RT-004",
+        "KB-EX-003"
+      ],
+      "recall@k": 1.0,
+      "precision@k": 0.3333,
+      "mrr": 0.5,
+      "ndcg@k": 0.6309,
+      "filter_compliance": 0.3333333333333333,
+      "id": "RAG-012",
+      "query": "退货运费由谁承担"
+    },
+    {
+      "expected": [
+        "KB-EX-001",
+        "KB-EX-002"
+      ],
+      "retrieved": [
+        "KB-CP-001",
+        "KB-CC-002",
+        "KB-EX-001",
+        "KB-RP-009"
+      ],
+      "recall@k": 0.5,
+      "precision@k": 0.25,
+      "mrr": 0.3333,
+      "ndcg@k": 0.3066,
+      "filter_compliance": 0.0,
+      "id": "RAG-013",
+      "query": "耳机有问题想换个新的可以吗"
+    },
+    {
+      "expected": [
+        "KB-EX-002"
+      ],
+      "retrieved": [
+        "KB-EX-001"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 1.0,
+      "id": "RAG-014",
+      "query": "换货多久能收到新货"
+    },
+    {
+      "expected": [
+        "KB-EX-003"
+      ],
+      "retrieved": [
+        "KB-EX-001",
+        "KB-EX-003",
+        "KB-CC-001",
+        "KB-RT-001",
+        "KB-RT-004"
+      ],
+      "recall@k": 1.0,
+      "precision@k": 0.2,
+      "mrr": 0.5,
+      "ndcg@k": 0.6309,
+      "filter_compliance": 0.4,
+      "id": "RAG-015",
+      "query": "换货的商品缺货了怎么办"
+    },
+    {
+      "expected": [
+        "KB-LG-001"
+      ],
+      "retrieved": [
+        "KB-EX-001",
+        "KB-RT-001",
+        "KB-RP-008",
+        "KB-LG-006"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.25,
+      "id": "RAG-016",
+      "query": "我的包裹显示运输中是什么意思"
+    },
+    {
+      "expected": [
+        "KB-LG-002"
+      ],
+      "retrieved": [
+        "KB-LG-002",
+        "KB-AT-003",
+        "KB-RP-006",
+        "KB-LG-005"
+      ],
+      "recall@k": 1.0,
+      "precision@k": 0.25,
+      "mrr": 1.0,
+      "ndcg@k": 1.0,
+      "filter_compliance": 0.5,
+      "id": "RAG-017",
+      "query": "包裹疑似丢了怎么办"
+    },
+    {
+      "expected": [
+        "KB-LG-003"
+      ],
+      "retrieved": [
+        "KB-CC-001",
+        "KB-PI-003",
+        "KB-CP-003",
+        "KB-EX-003"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-018",
+      "query": "仓库爆仓了发货会延迟多久"
+    },
+    {
+      "expected": [
+        "KB-LG-004"
+      ],
+      "retrieved": [
+        "KB-RP-006",
+        "KB-LG-006",
+        "KB-LG-004",
+        "KB-RT-001"
+      ],
+      "recall@k": 1.0,
+      "precision@k": 0.25,
+      "mrr": 0.3333,
+      "ndcg@k": 0.5,
+      "filter_compliance": 0.25,
+      "id": "RAG-019",
+      "query": "收到的耳机配件不对怎么办"
+    },
+    {
+      "expected": [
+        "KB-LG-005",
+        "KB-PI-001"
+      ],
+      "retrieved": [
+        "KB-LG-003",
+        "KB-RP-006",
+        "KB-RT-004",
+        "KB-LG-005",
+        "KB-CC-001"
+      ],
+      "recall@k": 0.5,
+      "precision@k": 0.2,
+      "mrr": 0.25,
+      "ndcg@k": 0.2641,
+      "filter_compliance": 0.4,
+      "id": "RAG-020",
+      "query": "订单为什么被拦截不发货了"
+    },
+    {
+      "expected": [
+        "KB-LG-006"
+      ],
+      "retrieved": [
+        "KB-CC-001",
+        "KB-RT-004",
+        "KB-EX-002",
+        "KB-CC-002",
+        "KB-LG-003"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.2,
+      "id": "RAG-021",
+      "query": "上海中转的包裹延误了多久"
+    },
+    {
+      "expected": [
+        "KB-CC-001",
+        "KB-CC-002"
+      ],
+      "retrieved": [
+        "KB-CC-001",
+        "KB-RP-006",
+        "KB-RT-004"
+      ],
+      "recall@k": 0.5,
+      "precision@k": 0.3333,
+      "mrr": 1.0,
+      "ndcg@k": 0.6131,
+      "filter_compliance": 0.3333333333333333,
+      "id": "RAG-022",
+      "query": "因为发货延迟能给我补偿券吗"
+    },
+    {
+      "expected": [
+        "KB-CC-002"
+      ],
+      "retrieved": [
+        "KB-CC-002",
+        "KB-EX-003",
+        "KB-RT-004",
+        "KB-CP-003",
+        "KB-CP-001"
+      ],
+      "recall@k": 1.0,
+      "precision@k": 0.2,
+      "mrr": 1.0,
+      "ndcg@k": 1.0,
+      "filter_compliance": 0.2,
+      "id": "RAG-023",
+      "query": "补偿优惠券有效期多久"
+    },
+    {
+      "expected": [
+        "KB-PI-001",
+        "KB-INC-002"
+      ],
+      "retrieved": [
+        "KB-RT-004",
+        "KB-CP-003",
+        "KB-EX-003"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-024",
+      "query": "我被重复扣费了怎么处理"
+    },
+    {
+      "expected": [
+        "KB-PI-002"
+      ],
+      "retrieved": [
+        "KB-EX-003",
+        "KB-RT-001"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-025",
+      "query": "支付失败订单会扣款吗"
+    },
+    {
+      "expected": [
+        "KB-PI-003"
+      ],
+      "retrieved": [
+        "KB-CC-001",
+        "KB-RP-005",
+        "KB-RT-001",
+        "KB-CP-001",
+        "KB-RP-006"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-026",
+      "query": "怎么开发票，多久能开好"
+    },
+    {
+      "expected": [
+        "KB-AT-001",
+        "KB-AT-003"
+      ],
+      "retrieved": [
+        "KB-RP-002",
+        "KB-AT-001",
+        "KB-RP-006",
+        "KB-RP-003"
+      ],
+      "recall@k": 0.5,
+      "precision@k": 0.25,
+      "mrr": 0.5,
+      "ndcg@k": 0.3869,
+      "filter_compliance": 0.25,
+      "id": "RAG-027",
+      "query": "什么问题会被转人工处理"
+    },
+    {
+      "expected": [
+        "KB-AT-002"
+      ],
+      "retrieved": [
+        "KB-CP-003",
+        "KB-AT-001",
+        "KB-EX-003"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.3333333333333333,
+      "id": "RAG-028",
+      "query": "售后工单多久有人处理"
+    },
+    {
+      "expected": [
+        "KB-AT-003"
+      ],
+      "retrieved": [
+        "KB-CP-003",
+        "KB-RP-008"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-029",
+      "query": "工单显示 in_progress 是什么意思"
+    },
+    {
+      "expected": [
+        "KB-INC-001"
+      ],
+      "retrieved": [
+        "KB-INC-004",
+        "KB-CC-002",
+        "KB-CP-002"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.3333333333333333,
+      "id": "RAG-030",
+      "query": "账号被临时锁定了是怎么回事"
+    },
+    {
+      "expected": [
+        "KB-INC-002"
+      ],
+      "retrieved": [
+        "KB-CP-003"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-031",
+      "query": "最近有重复扣费的故障吗"
+    },
+    {
+      "expected": [
+        "KB-INC-003",
+        "KB-INC-004"
+      ],
+      "retrieved": [
+        "KB-EX-001",
+        "KB-CC-001",
+        "KB-RT-001",
+        "KB-PI-003"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-032",
+      "query": "售后申请页面一直报 500 错误"
+    },
+    {
+      "expected": [
+        "KB-INC-004"
+      ],
+      "retrieved": [
+        "KB-CC-001",
+        "KB-RP-009",
+        "KB-CC-002"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-033",
+      "query": "登录一直提示 401 怎么办"
+    },
+    {
+      "expected": [
+        "KB-CP-001"
+      ],
+      "retrieved": [
+        "KB-RP-003",
+        "KB-AT-001"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.0,
+      "id": "RAG-034",
+      "query": "客服能不能承诺退款到账时间"
+    },
+    {
+      "expected": [
+        "KB-CP-002"
+      ],
+      "retrieved": [
+        "KB-LG-005",
+        "KB-CP-001",
+        "KB-PI-003",
+        "KB-AT-001",
+        "KB-CP-003"
+      ],
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0,
+      "ndcg@k": 0.0,
+      "filter_compliance": 0.4,
+      "id": "RAG-035",
+      "query": "客服会向我要密码或验证码吗"
+    }
+  ]
+}

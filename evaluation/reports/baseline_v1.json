@@ -1,0 +1,1374 @@
+{
+  "schema_version": "echomind.eval_report.v1",
+  "report_name": "baseline_v1",
+  "generated_at": "2026-07-29T06:39:36.698163Z",
+  "dataset": {
+    "name": "customer_support_eval_v1",
+    "path": "/home/li/workspace/EchoMind/evaluation/datasets/customer_support_eval_v1.jsonl",
+    "case_count": 21
+  },
+  "runtime": {
+    "base_url": "http://127.0.0.1:8000",
+    "health_status": "ok",
+    "judge_enabled": false,
+    "judge_model": null
+  },
+  "metrics": {
+    "intent_accuracy": 0.0,
+    "agent_routing_accuracy": 0.5238,
+    "escalation_accuracy": 0.8571,
+    "rag_usage_recall": 1.0,
+    "tool_selection_accuracy": null,
+    "task_completion_rate": null,
+    "grounded_response_rate": null,
+    "avg_latency_ms": 10740.28,
+    "p95_latency_ms": 17544.3,
+    "avg_tokens_per_session": null,
+    "tool_success_rate": null
+  },
+  "summary": {
+    "total_cases": 21,
+    "scenes": {
+      "general": 3,
+      "billing": 5,
+      "technical": 4,
+      "account": 3,
+      "complaint": 2,
+      "escalation": 2,
+      "mixed": 2
+    },
+    "unsupported_metrics": [
+      "tool_selection_accuracy",
+      "grounded_response_rate",
+      "avg_tokens_per_session",
+      "tool_success_rate"
+    ],
+    "failed_case_count": 21,
+    "failed_cases_preview": [
+      {
+        "id": "general_product_001",
+        "scene": "general",
+        "actual_intent": "query",
+        "actual_agent": "general",
+        "actual_escalated": false
+      },
+      {
+        "id": "general_usage_001",
+        "scene": "general",
+        "actual_intent": "query",
+        "actual_agent": "general",
+        "actual_escalated": true
+      },
+      {
+        "id": "general_usage_002",
+        "scene": "general",
+        "actual_intent": "query",
+        "actual_agent": "general",
+        "actual_escalated": false
+      },
+      {
+        "id": "billing_refund_001",
+        "scene": "billing",
+        "actual_intent": "request",
+        "actual_agent": "general",
+        "actual_escalated": false
+      },
+      {
+        "id": "billing_refund_002",
+        "scene": "billing",
+        "actual_intent": "request",
+        "actual_agent": "general",
+        "actual_escalated": false
+      },
+      {
+        "id": "billing_charge_001",
+        "scene": "billing",
+        "actual_intent": "billing",
+        "actual_agent": "billing",
+        "actual_escalated": false
+      },
+      {
+        "id": "billing_invoice_001",
+        "scene": "billing",
+        "actual_intent": "query",
+        "actual_agent": "general",
+        "actual_escalated": false
+      },
+      {
+        "id": "billing_invoice_002",
+        "scene": "billing",
+        "actual_intent": "query",
+        "actual_agent": "general",
+        "actual_escalated": false
+      },
+      {
+        "id": "technical_login_001",
+        "scene": "technical",
+        "actual_intent": "technical",
+        "actual_agent": "technical",
+        "actual_escalated": false
+      },
+      {
+        "id": "technical_login_002",
+        "scene": "technical",
+        "actual_intent": "technical",
+        "actual_agent": "technical",
+        "actual_escalated": false
+      },
+      {
+        "id": "technical_connection_001",
+        "scene": "technical",
+        "actual_intent": "technical",
+        "actual_agent": "technical",
+        "actual_escalated": false
+      },
+      {
+        "id": "technical_bug_001",
+        "scene": "technical",
+        "actual_intent": "technical",
+        "actual_agent": "technical",
+        "actual_escalated": false
+      },
+      {
+        "id": "account_password_001",
+        "scene": "account",
+        "actual_intent": "account",
+        "actual_agent": "billing",
+        "actual_escalated": false
+      },
+      {
+        "id": "account_permission_001",
+        "scene": "account",
+        "actual_intent": "technical",
+        "actual_agent": "technical",
+        "actual_escalated": false
+      },
+      {
+        "id": "account_permission_002",
+        "scene": "account",
+        "actual_intent": "account",
+        "actual_agent": "billing",
+        "actual_escalated": false
+      },
+      {
+        "id": "complaint_service_001",
+        "scene": "complaint",
+        "actual_intent": "complaint",
+        "actual_agent": "general",
+        "actual_escalated": false
+      },
+      {
+        "id": "complaint_escalation_001",
+        "scene": "complaint",
+        "actual_intent": "escalation",
+        "actual_agent": "general",
+        "actual_escalated": true
+      },
+      {
+        "id": "escalation_request_001",
+        "scene": "escalation",
+        "actual_intent": "escalation",
+        "actual_agent": "general",
+        "actual_escalated": true
+      },
+      {
+        "id": "mixed_tech_billing_001",
+        "scene": "mixed",
+        "actual_intent": "other",
+        "actual_agent": "general",
+        "actual_escalated": true
+      },
+      {
+        "id": "mixed_account_billing_001",
+        "scene": "mixed",
+        "actual_intent": "billing",
+        "actual_agent": "billing",
+        "actual_escalated": false
+      }
+    ],
+    "metrics_ready_for_comparison": [
+      "intent_accuracy",
+      "agent_routing_accuracy",
+      "escalation_accuracy",
+      "rag_usage_recall",
+      "avg_latency_ms",
+      "p95_latency_ms"
+    ]
+  },
+  "cases": [
+    {
+      "id": "general_product_001",
+      "scene": "general",
+      "difficulty": "easy",
+      "risk_level": "low",
+      "input": {
+        "user_query": "你们这个智能客服系统主要能帮企业解决什么问题？",
+        "history": [],
+        "user_profile": {
+          "tier": "standard",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "general_product_consult",
+        "expected_agent": "general",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "answer_with_rag",
+        "gold_answer_points": [
+          "说明系统面向企业客服场景",
+          "提到典型能力如意图识别、知识检索或多轮支持",
+          "回答保持概括性而不是编造未给出的承诺"
+        ],
+        "forbidden_behaviors": [
+          "捏造不存在的企业客户案例",
+          "承诺未说明的商业功能"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_general_product_001_a559d611",
+        "response": "EchoMind 智能客服能帮助企业高效处理客户的首轮咨询和常见问题，主要解决以下三类问题：\n\n1.  **降低人工服务压力**：7×24小时自动解答账户安全、常见技术故障（如登录出错、应用崩溃）、订单状态查询等重复性高频问题。\n2.  **提升问题处理效率**：通过标准化的接待流程，自动收集订单号、问题描述等关键信息，并准确分流到技术支持或账单支持等专业团队，减少用户重复描述。\n3.  **保障服务规范性**：按照预设的业务规则和知识库给出标准、安全的回复（例如不索要密码、不承诺无法保证的结果），确保服务质量和响应一致性。\n\n简单来说，它能作为企业的“第一道服务防线”，快速解决简单问题，并将复杂问题有序交给人工处理。如果您有具体的咨询问题，也欢迎直接提出。",
+        "intent": "query",
+        "agent_type": "general",
+        "escalated": false,
+        "latency_ms": 9842.5,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": true,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "general_usage_001",
+      "scene": "general",
+      "difficulty": "easy",
+      "risk_level": "low",
+      "input": {
+        "user_query": "知识库上传之后，客服回答一般多久能用上新内容？",
+        "history": [],
+        "user_profile": {
+          "tier": "standard",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "general_usage_help",
+        "expected_agent": "general",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "answer_with_rag",
+        "gold_answer_points": [
+          "说明需视知识库处理流程而定",
+          "若无法确认具体时效应明确说明",
+          "给出建议如等待同步或联系管理员确认"
+        ],
+        "forbidden_behaviors": [
+          "杜撰固定同步时延",
+          "声称已经检查到用户的知识库状态"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_general_usage_001_5d24077d",
+        "response": "关于知识库上传后新内容生效的时间，目前我没有掌握具体的系统更新延迟参数。这类技术细节通常需要后台技术支持团队才能确认。\n\n建议你联系**技术支持**或**转接人工客服**，他们可以帮你查询知识库同步的周期。\n\n如果你是在使用过程中遇到内容更新不及时的情况，也可以直接说明具体问题，我会尝试依据已有知识库先提供帮助。",
+        "intent": "query",
+        "agent_type": "general",
+        "escalated": true,
+        "latency_ms": 5733.0,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": true,
+        "escalation_match": false,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "general_usage_002",
+      "scene": "general",
+      "difficulty": "medium",
+      "risk_level": "low",
+      "input": {
+        "user_query": "我第一次配置这个系统，不知道该先配知识库还是先配客服角色。",
+        "history": [],
+        "user_profile": {
+          "tier": "standard",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "general_usage_help",
+        "expected_agent": "general",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "answer_with_rag",
+        "gold_answer_points": [
+          "给出合理的初始配置顺序建议",
+          "说明知识库和角色配置各自作用",
+          "若存在依赖关系应明确指出"
+        ],
+        "forbidden_behaviors": [
+          "捏造不存在的强制配置顺序"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_general_usage_002_0297fb18",
+        "response": "建议先配置**知识库**，再配置客服角色。原因如下：\n\n1. **知识库是回答的基础**：客服需要根据知识库内容来解答用户问题。如果知识库内容不完整或不准确，客服角色定义得再好，也无法有效处理问题。\n2. **角色依赖知识内容**：客服角色的接待规范、分流规则等，最终都围绕知识库中的信息执行。先搭建好内容框架，角色功能才能与实际业务需求匹配。\n3. **降低后续调整成本**：如果先配置角色再补充知识，可能出现角色规则与知识库不兼容的情况，需要反复调整。\n\n如果你需要具体配置指导，可以告诉我你计划接入哪些业务场景（例如订单查询、退款、账户安全等），我可以帮你整理知识库的优先结构。",
+        "intent": "query",
+        "agent_type": "general",
+        "escalated": false,
+        "latency_ms": 10082.2,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": true,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "billing_refund_001",
+      "scene": "billing",
+      "difficulty": "easy",
+      "risk_level": "medium",
+      "input": {
+        "user_query": "我昨天订阅后发现买错了，可以退款吗？",
+        "history": [],
+        "user_profile": {
+          "tier": "standard",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "billing_refund",
+        "expected_agent": "billing",
+        "requires_tool": true,
+        "expected_tools": [
+          "refund_policy_check"
+        ],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "use_tool_then_answer",
+        "gold_answer_points": [
+          "说明需要先核实退款政策",
+          "不得直接承诺已经完成退款",
+          "给出下一步处理建议"
+        ],
+        "forbidden_behaviors": [
+          "直接承诺已完成退款",
+          "未核实就保证符合退款条件"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_billing_refund_001_5d956006",
+        "response": "根据我们的退款政策，您在购买后7天内可以申请无理由退款。昨天购买的商品符合条件，您可以直接提交退款申请。系统会在1-3个工作日内审核，审核通过后款项将在5-7个工作日内退回原支付账户。如果商品尚未发货，退款会直接处理；如果已发货，需要先完成退货流程（退货运费由您承担，除非是商品质量问题）。建议您尽快操作哦！",
+        "intent": "request",
+        "agent_type": "general",
+        "escalated": false,
+        "latency_ms": 7638.0,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": false,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "billing_refund_002",
+      "scene": "billing",
+      "difficulty": "medium",
+      "risk_level": "medium",
+      "input": {
+        "user_query": "我买的是年费套餐，只用了半天，现在想退掉。",
+        "history": [],
+        "user_profile": {
+          "tier": "pro",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "billing_refund",
+        "expected_agent": "billing",
+        "requires_tool": true,
+        "expected_tools": [
+          "refund_policy_check"
+        ],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "use_tool_then_answer",
+        "gold_answer_points": [
+          "说明应先按套餐退款规则核实",
+          "不能直接确认一定可退",
+          "若不能即时处理应给出申请路径"
+        ],
+        "forbidden_behaviors": [
+          "直接说已经提交退款成功",
+          "编造具体退款到账时间"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_billing_refund_002_f6946da1",
+        "response": "根据我们的退款政策，年费套餐同样适用**购买后7天内无理由退款**的规定。您只使用了半天，完全在退款的时效范围内。  \n\n请按以下步骤操作：  \n1. 提交退款申请（可通过订单页面或联系客服）。  \n2. 系统将在1-3个工作日内审核。  \n3. 审核通过后，款项会在5-7个工作日内退回原支付账户。  \n\n如果已激活服务或下载了相关资源，可能会涉及服务停止或数据清除，不影响退款资格。如有其他疑问，随时告诉我。",
+        "intent": "request",
+        "agent_type": "general",
+        "escalated": false,
+        "latency_ms": 8151.8,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": false,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "billing_charge_001",
+      "scene": "billing",
+      "difficulty": "medium",
+      "risk_level": "high",
+      "input": {
+        "user_query": "我这个月被扣了两次钱，是不是你们系统出问题了？",
+        "history": [],
+        "user_profile": {
+          "tier": "standard",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "billing_charge_issue",
+        "expected_agent": "billing",
+        "requires_tool": true,
+        "expected_tools": [
+          "order_lookup"
+        ],
+        "requires_rag": false,
+        "must_escalate": false,
+        "expected_outcome": "use_tool_then_answer",
+        "gold_answer_points": [
+          "识别为重复扣费或账单异常",
+          "说明需要先核实账单或订单记录",
+          "在未核实前不能下结论"
+        ],
+        "forbidden_behaviors": [
+          "未查询就声称系统扣费错误",
+          "直接承诺立即退款"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_billing_charge_001_93bb9f4b",
+        "response": "您好，非常理解您对重复扣款的担忧。根据我们的记录，这种情况通常有几种可能原因，让我先帮您分析一下。\n\n首先，请提供一下您收到的这两笔扣款的**订单号或交易流水号**，这样我可以帮您精确查询每笔交易的具体情况。常见的重复扣款原因包括：\n1. **订阅续费设置**：可能是您之前开启了自动续费功能，而本月恰好进行了两次续费周期。\n2. **误操作**：您可能不小心在短时间内重复点击了购买或订阅按钮。\n3. **系统异常**：虽然极少发生，但也有可能是支付系统出现了暂时的重复扣款请求。\n\n在核实具体订单之前，我无法直接判断是否为系统问题。请您先通过订单信息进行确认，我们再一起看下一步。如果确认是系统重复扣款，我会引导您进入快速退款流程，但涉及实际退款操作时，需要转交给人工审核团队处理，他们会在**1-3个工作日内**审核，审核通过后款项将原路退回（通常5-7个工作日）。\n\n您方便提供订单号吗？我会立刻为您查询。",
+        "intent": "billing",
+        "agent_type": "billing",
+        "escalated": false,
+        "latency_ms": 11869.4,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": true,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "billing_invoice_001",
+      "scene": "billing",
+      "difficulty": "easy",
+      "risk_level": "low",
+      "input": {
+        "user_query": "发票在哪里申请？",
+        "history": [],
+        "user_profile": {
+          "tier": "standard",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "billing_invoice",
+        "expected_agent": "billing",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "answer_with_rag",
+        "gold_answer_points": [
+          "说明发票申请入口或流程",
+          "若需订单信息应明确说明",
+          "给出下一步操作建议"
+        ],
+        "forbidden_behaviors": [
+          "捏造发票入口链接",
+          "声称已替用户提交发票申请"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_billing_invoice_001_15ddfd38",
+        "response": "抱歉，知识库中暂时没有关于发票申请的详细说明。通常您可以在订单完成后，登录账户在“我的订单”页面找到对应订单，点击“申请发票”进行操作。\n\n如果页面没有相关入口，或者您需要特殊类型发票（如增值税专用发票），您可以提供订单号，我来帮您查询具体的申请方式和流程。",
+        "intent": "query",
+        "agent_type": "general",
+        "escalated": false,
+        "latency_ms": 8684.5,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": false,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "billing_invoice_002",
+      "scene": "billing",
+      "difficulty": "medium",
+      "risk_level": "low",
+      "input": {
+        "user_query": "我已经付款了，但一直没找到开发票的地方。",
+        "history": [
+          {
+            "role": "user",
+            "content": "我昨天升级了套餐。"
+          },
+          {
+            "role": "assistant",
+            "content": "升级已经生效。"
+          }
+        ],
+        "user_profile": {
+          "tier": "pro",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "billing_invoice",
+        "expected_agent": "billing",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "answer_with_rag",
+        "gold_answer_points": [
+          "结合用户已付款背景回答发票流程",
+          "说明可能需要的订单或账户信息",
+          "若无法确认入口状态应建议联系管理员或人工"
+        ],
+        "forbidden_behaviors": [
+          "声称已看到用户的发票状态"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_billing_invoice_002_6db01e87",
+        "response": "您可以在订单详情页找到“申请发票”的入口，通常在支付完成后72小时内可以申请。如果找不到，可以告诉我您的订单号，我帮您查看具体操作流程。",
+        "intent": "query",
+        "agent_type": "general",
+        "escalated": false,
+        "latency_ms": 6005.7,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": false,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "technical_login_001",
+      "scene": "technical",
+      "difficulty": "easy",
+      "risk_level": "medium",
+      "input": {
+        "user_query": "我现在一直登录不上去，提示账号或密码错误。",
+        "history": [],
+        "user_profile": {
+          "tier": "standard",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "technical_login_failure",
+        "expected_agent": "technical",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": false,
+        "must_escalate": false,
+        "expected_outcome": "ask_followup",
+        "gold_answer_points": [
+          "识别为登录故障问题",
+          "给出基础排查方向如账号密码、重置密码、确认账号状态",
+          "如果信息不足应继续追问"
+        ],
+        "forbidden_behaviors": [
+          "未核实就断言账号被封禁"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_technical_login_001_55e4e723",
+        "response": "好的，我理解您遇到了登录失败的问题，提示是“账号或密码错误”。这通常属于用户侧的认证问题。\n\n我们先按步骤排查，请先确认以下几点：\n\n1.  **确认是密码错误，还是账号被锁定？**\n    *   请您仔细回想，最近是否修改过密码？或者是否连续输错密码超过5次以上？如果连续输错，系统可能会暂时锁定账户以保护安全。\n    *   **排查步骤**：建议您先尝试通过绑定的手机号或邮箱，点击登录页面的“**忘记密码**”功能重置密码。重置后使用新密码登录。\n    *   **注意**：请不要在公开渠道提供您的密码。\n\n2.  **检查账号输入是否有误？**\n    *   请确认登录的账号（手机号/邮箱/用户名）是否正确，是否有空格或多余字符。有时手机号换了运营商、邮箱变更，也可能导致账号名无效。\n\n3.  **是否开启了“两步验证”？**\n    *   如果您开启了双重验证，登录时除了密码，通常还需要输入验证码或通过安全设备确认。请检查登录页面是否有额外的验证码输入框。\n\n**如果尝试了重置密码后仍然无法登录，或者您看到了“账号已锁定”或“用户不存在”等不同提示，请提供以下信息，我会为您进一步判断：**\n\n*   **具体错误提示是什么？** （比如“账号或密码错误”、“登录失败”、“账号已锁定”）\n*   **您最近一次能正常登录是什么时候？**\n*   **这期间有没有修改过密码、换手机号或更换过登录设备？**\n\n根据您提供的信息，如果是前台操作无法解决（例如账号被锁定需要后台解锁），或者重置密码链接收不到，那将需要**升级为后台或人工处理**。",
+        "intent": "technical",
+        "agent_type": "technical",
+        "escalated": false,
+        "latency_ms": 12968.4,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": true,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "technical_login_002",
+      "scene": "technical",
+      "difficulty": "medium",
+      "risk_level": "medium",
+      "input": {
+        "user_query": "验证码一直收不到，我试了好几次还是不行。",
+        "history": [],
+        "user_profile": {
+          "tier": "standard",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "technical_login_failure",
+        "expected_agent": "technical",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "ask_followup",
+        "gold_answer_points": [
+          "给出验证码接收失败的常见排查方向",
+          "建议检查邮箱或手机拦截等因素",
+          "若需要更多信息应继续追问"
+        ],
+        "forbidden_behaviors": [
+          "直接断言平台短信服务故障",
+          "声称已查询到验证码发送日志"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_technical_login_002_14c7f3e5",
+        "response": "您好，理解您收不到验证码的困扰。我们来一步步排查一下。\n\n根据系统知识库中关于**账户安全**的说明，这种情况可能与安全机制有关。请先按以下步骤操作：\n\n1.  **检查基础设置**\n    -   **确认手机号/邮箱**：请检查您输入的手机号码或邮箱地址是否正确，尤其是国际区号（如+86）。\n    -   **检查拦截与信号**：请查看手机短信收件箱（包括垃圾短信/拦截名单中是否有该验证码短信），并确保手机信号正常。如果是邮箱，请检查垃圾邮件文件夹。\n    -   **尝试切换网络**：断开Wi-Fi，使用手机流量重试，或重启手机后再试一次。\n\n2.  **处理高频请求与账户安全状态**\n    -   **请勿频繁点击**：如果您在短时间内连续点击“获取验证码”多次，系统可能出于安全考虑暂时限制了发送（这是常见保护机制）。**请等待至少10-15分钟**后再尝试仅一次。\n    -   **检查账户是否被锁定**：参照知识库中“账户安全”部分：“发现账户异常登录时，系统会自动锁定账户并发送通知”。如果账户因多次尝试错误登录被锁定，验证码发送可能会被暂停。您可以去安全中心查看账户状态，看是否有锁定提示或安全通知。\n\n3.  **尝试备选方案**\n    -   如果收不到短信，可以尝试使用**绑定邮箱**接收验证码（如果支持）。\n    -   如果您已开启“两步验证”（知识库建议），可以检查一下备用验证码或认证器App是否可用。\n\n---\n\n**如果以上所有步骤都尝试后，仍然收不到验证码，那么这个问题需要升级到后台技术支持才能处理。**\n\n因为可能涉及以下后台情况，无法由前端直接解决：\n-   运营商短信通道延迟或阻塞。\n-   系统对您账户的验证码发送策略异常。\n-   您的账户信息需要后台手动解绑/重置。\n\n**请您提供以下信息，我将为您生成升级工单，转交给后台专业团队处理：**\n1.  您的账号（用户名或注册手机号/邮箱）\n2.  您尝试接收验证码的具体手机号/邮箱\n3.  您使用的客户端版本（App或网页）\n4.  出现此问题的大致时间\n5.  有任何相关的错误提示截图（如有）",
+        "intent": "technical",
+        "agent_type": "technical",
+        "escalated": false,
+        "latency_ms": 17214.9,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": true,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "technical_connection_001",
+      "scene": "technical",
+      "difficulty": "medium",
+      "risk_level": "medium",
+      "input": {
+        "user_query": "客户端老是提示连接超时，重启也没用。",
+        "history": [],
+        "user_profile": {
+          "tier": "pro",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "technical_connection_issue",
+        "expected_agent": "technical",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "ask_followup",
+        "gold_answer_points": [
+          "识别为连接异常问题",
+          "给出基础网络和环境排查方向",
+          "不能在无信息情况下直接归因到某个单点故障"
+        ],
+        "forbidden_behaviors": [
+          "直接杜撰后端服务宕机",
+          "声称已经检查到用户网络状态"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_technical_connection_001_4ca63b81",
+        "response": "您好，很理解您遇到的连接超时问题。重启操作通常可以解决一些临时的程序卡顿，但问题持续出现，说明根本原因可能不在客户端自身。\n\n根据您的描述，这很可能与**网络环境**或**服务端连接**有关。我们按由易到难的顺序排查一下：\n\n### 第一步：快速自查（3个关键点）\n\n请您先确认以下三点：\n\n1.  **是特定功能超时，还是整个客户端都无法连接？**（例如：登录时超时？刷新数据时超时？还是打开应用就提示超时？）\n2.  **当前客户端是否处于公司内网、VPN（虚拟专用网络）或需要代理的网络环境下？**\n3.  **同一网络下，其他设备或浏览器访问其他网站/应用是否正常？**（用于判断是网络问题还是我们系统问题）\n\n### 第二步：标准排查步骤\n\n请按顺序尝试以下操作，每一步后都验证问题是否解决：\n\n1.  **检查本地网络与防火墙**\n    *   **为什么做**：超时最常见的原因是网络不通或被拦截。\n    *   **操作**：\n        *   尝试断开 WiFi，使用手机移动数据热点连接电脑/手机，看是否依然超时。如果恢复正常，说明问题出在原网络（如公司WiFi限制、家庭路由器问题）。\n        *   如果您在公司，请暂时**关闭防火墙或VPN**后再试一次（仅用于测试，如果恢复了，需要联系您的IT部门将我们的服务器地址加入白名单）。\n    *   **验证方式**：重新打开客户端，执行之前超时的操作。\n\n2.  **检查DNS解析是否正常**\n    *   **为什么做**：DNS解析失败会导致无法找到服务器IP，直接超时。\n    *   **操作**：\n        *   打开电脑的命令提示符或终端，输入以下命令后回车：\n            ```bash\n            nslookup echo-mind.com\n            ```\n            （如果您的客户端是其他域名，请替换 `echo-mind.com`）\n        *   **观察结果**：如果返回“无法解析”或长时间无响应，说明DNS有问题。您可以尝试将DNS临时改为公共DNS（例如：`8.8.8.8` 和 `114.114.114.114`）。\n    *   **验证方式**：修改DNS后，重启客户端测试。\n\n3.  **使用 curl 或浏览器测试接口联通性**\n    *   **为什么做**：绕过客户端软件，直接用底层命令测试，可以判断是客户端问题还是服务端问题。\n    *   **操作**（以电脑端为例）：\n        *   打开命令提示符或终端，输入以下命令：\n            ```bash\n            curl -v https://api.echo-mind.com/health\n            ```\n            （请替换为您的客户端实际连接的服务地址；如果不知道，也可以直接访问客户端的登录页网址）\n        *   **观察结果**：\n            *   如果返回HTTP状态码（如200、401等），说明**网络和服务器是通的**，问题可能出在客户端软件本身（比如证书、配置）。\n            *   如果返回 `Connection timed out` 或 `Could not resolve host`，则确认是网络或服务器问题。\n\n### 第三步：需要您补充的信息\n\n如果以上步骤仍无法定位问题，请提供以下信息，我将能更精准地分析：\n\n*",
+        "intent": "technical",
+        "agent_type": "technical",
+        "escalated": false,
+        "latency_ms": 16700.2,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": true,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "technical_bug_001",
+      "scene": "technical",
+      "difficulty": "hard",
+      "risk_level": "medium",
+      "input": {
+        "user_query": "我点导入知识库后页面直接报错了，刷新也还是不行。",
+        "history": [
+          {
+            "role": "user",
+            "content": "刚才上传了一个 pdf。"
+          },
+          {
+            "role": "assistant",
+            "content": "系统正在处理中。"
+          }
+        ],
+        "user_profile": {
+          "tier": "pro",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "technical_bug_report",
+        "expected_agent": "technical",
+        "requires_tool": true,
+        "expected_tools": [
+          "incident_lookup"
+        ],
+        "requires_rag": false,
+        "must_escalate": false,
+        "expected_outcome": "use_tool_then_answer",
+        "gold_answer_points": [
+          "识别为产品故障或 bug 报告",
+          "建议收集错误信息或检查已知故障",
+          "若无法当场解决应给出升级或工单路径"
+        ],
+        "forbidden_behaviors": [
+          "捏造具体报错原因",
+          "声称已修复用户问题"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_technical_bug_001_070280fe",
+        "response": "好的，我理解您遇到了导入知识库后页面报错，刷新也无法恢复的问题。这是一个非常影响使用体验的故障，我们一步步来排查。\n\n请您先找一下页面上的**具体报错信息**，比如：\n- 有没有**错误代码**（如 500, 502, 403）？\n- 或者页面显示的**错误提示文字**（如“服务异常”、“网络超时”、“参数错误”等）？\n- 如果可以，请提供一张清晰的**截图**。\n\n在您查找的同时，我们可以先确认以下三点最简单的情况，有时问题就出在这里：\n\n1.  **检查网络连接**：请尝试访问其他网站或应用，确认您当前的网络是否正常。特别关注一下是否有 VPN 或代理，尝试关闭后再访问或导入。\n2.  **更换浏览器或清缓存**：尝试使用浏览器的**无痕/隐私模式**打开系统，看是否还能复现。如果可以，可能是您常用浏览器的缓存或扩展插件冲突。\n    - **清除缓存**：在浏览器设置中找到“清除浏览数据”，勾选“缓存的图片和文件”，选择“所有时间”，然后清除。\n3.  **确认文件与操作**：您导入的知识库文件是什么格式（如 .txt, .csv, .json）？大小大约是多少？点击“导入”按钮后，是立刻报错，还是在上传过程中才报错？\n\n另外，请回忆一下，**这个问题是今天第一次出现吗？** 最近系统是否有过升级或配置变更？\n\n在您提供更具体的信息之前，我可以给出初步判断：\n\n-   如果报错是 **500** 类错误，说明是服务器在处理您的请求时发生了内部异常。这通常与文件格式、内容或服务器短暂故障有关，需要后台查看日志。\n-   如果报错是 **403**，则可能与您的账户权限有关，您可能需要确认您是否拥有“知识库导入”的权限。\n-   如果页面是**白屏**或显示“页面加载失败”，则可能和网络连接或服务端页面配置有关。\n\n**请务必先尝试我上面提到的三点（网络、无痕模式、浏览器缓存），这是最快速排除客户端问题的办法。**\n\n如果这些方法都无效，并且您能提供具体的报错信息，我会帮您做更深入的分析。如果是持续的系统内部错误（如反复出现500错误且影响您正常工作），我们可能需要将问题升级到二线技术团队，让他们查看后台服务日志。",
+        "intent": "technical",
+        "agent_type": "technical",
+        "escalated": false,
+        "latency_ms": 15631.0,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": true,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "account_password_001",
+      "scene": "account",
+      "difficulty": "easy",
+      "risk_level": "low",
+      "input": {
+        "user_query": "我忘记密码了，怎么重置？",
+        "history": [],
+        "user_profile": {
+          "tier": "standard",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "account_password_reset",
+        "expected_agent": "general",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "answer_with_rag",
+        "gold_answer_points": [
+          "给出密码重置入口或步骤",
+          "说明需要的身份验证方式",
+          "如果步骤可能因环境不同而变化应提示用户确认"
+        ],
+        "forbidden_behaviors": [
+          "伪造密码重置成功",
+          "索要不必要的敏感信息"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_account_password_001_fd42e90b",
+        "response": "根据我掌握的知识库信息，您可以通过**绑定的手机号或邮箱**重置密码。不过，密码重置属于账户安全操作，不在我的账单服务专长范围内。为了确保您的账户安全，建议您直接前往登录页面，点击“忘记密码”选项，按照官方指引完成重置。如果您在操作过程中遇到与账单相关的问题（如验证身份后需要查看订阅账单），随时可以再来找我。",
+        "intent": "account",
+        "agent_type": "billing",
+        "escalated": false,
+        "latency_ms": 9208.6,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": false,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "account_permission_001",
+      "scene": "account",
+      "difficulty": "medium",
+      "risk_level": "high",
+      "input": {
+        "user_query": "我是管理员，但团队成员还是看不到知识库管理页面。",
+        "history": [],
+        "user_profile": {
+          "tier": "pro",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "account_permission_issue",
+        "expected_agent": "billing",
+        "requires_tool": true,
+        "expected_tools": [
+          "account_status_lookup"
+        ],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "use_tool_then_answer",
+        "gold_answer_points": [
+          "识别为权限问题",
+          "说明需要核实成员角色或权限配置",
+          "在未查询前不能直接断言是系统 bug"
+        ],
+        "forbidden_behaviors": [
+          "未经核实就建议直接修改权限数据",
+          "声称已看到该团队成员权限详情"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_account_permission_001_788ad0f2",
+        "response": "好的，我们来排查“管理员无法让团队成员看到知识库管理页面”的问题。作为技术支持专家，我将为您提供清晰的步骤化解决方案。\n\n首先，我们需要明确一个关键前提：您所在的系统/平台的具体名称（例如：是某个特定的SaaS产品、企业内部系统、还是类似飞书/钉钉/Confluence等平台）。这将决定具体的操作路径。\n\n由于当前的知识库中未包含关于“知识库管理页面权限”的配置信息，我将基于通用客服管理和权限系统的常见逻辑，为您提供排查步骤。**请注意，如果涉及后台修改权限数据或系统配置，后续可能需要升级处理。**\n\n---\n\n### 步骤化排查方案\n\n#### 第一步：确认您的管理员身份和权限范围\n- **操作**：请检查您在系统内的 **“角色”** 或 **“权限组”** 名称。\n    - 您是否拥有 **“系统管理员”**、**“超级管理员”** 或类似的最高权限角色？还是仅仅是 **“知识库管理员”**？\n    - **关键点**：有时“管理员”是多个层级的。只有最高权限角色才能授予“查看知识库管理页面”这一权限给其他角色。例如，系统管理员可以设置：所有“团队成员”角色都能看到该页面。但如果您的角色权限不足，则无法进行此操作。\n- **排查**：前往系统的 **“用户管理”** 或 **“角色管理”** 设置页面，查看您自己账号对应的角色权限列表，确认是否包含“管理知识库”或“查看知识库管理页面”的权限。\n\n#### 第二步：检查并修改“团队成员”的角色权限\n假设您的管理员权限足够，接下来需要检查目标用户的权限配置：\n1.  **定位权限设置**：进入 **“知识库管理”** -> **“权限设置”** 或 **“成员管理”** 页面。通常这里会有一个 **“角色权限”** 或 **“配置权限”** 的入口。\n2.  **检查“团队成员”角色**：找到名为“团队成员”、“普通成员”或类似的基础角色。\n3.  **查看权限列表**：在该角色的权限列表中，找到与“知识库管理页面”相关的权限开关。常见的名称有：\n    -   “查看知识库管理后台”\n    -   “访问知识库设置”\n    -   “管理知识库”\n4.  **开启权限**：确认该开关是否处于 **“开启”** 状态。如果未开启，请勾选或打开它，然后 **保存配置**。\n\n#### 第三步：检查页面访问范围或部门限制\n- **排查**：有些系统会限制“管理页面”的访问范围。例如，只允许某个特定部门或项目组的成员查看。请检查 **“知识库管理页面”是否有部门、群组或项目范围的限制**？您的团队成员是否在这些范围之外？\n- **操作**：如果有范围限制，请将团队成员添加到相应的范围中，或者解除页面的范围限制。\n\n#### 第四步：让成员进行基础操作验证\n权限配置完成后，请让团队成员：\n1.  **退出登录**",
+        "intent": "technical",
+        "agent_type": "technical",
+        "escalated": false,
+        "latency_ms": 17544.3,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": false,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "account_permission_002",
+      "scene": "account",
+      "difficulty": "hard",
+      "risk_level": "high",
+      "input": {
+        "user_query": "我的账号突然被限制操作了，你们是不是把我封了？",
+        "history": [],
+        "user_profile": {
+          "tier": "standard",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "account_permission_issue",
+        "expected_agent": "billing",
+        "requires_tool": true,
+        "expected_tools": [
+          "account_status_lookup"
+        ],
+        "requires_rag": false,
+        "must_escalate": true,
+        "expected_outcome": "handoff_to_human",
+        "gold_answer_points": [
+          "说明需要核实账号状态",
+          "不能直接确认封禁原因",
+          "若涉及限制或异常应给出人工升级路径"
+        ],
+        "forbidden_behaviors": [
+          "直接声称账号因违规被封",
+          "在未核实前给出确定性处罚原因"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_account_permission_002_23dc2847",
+        "response": "请别担心，这很可能不是“封号”，而是触发了账户保护机制。根据系统记录，为了保障您的账户安全，当检测到异常登录尝试或多次输入错误密码时，系统会自动锁定账户并发送通知。\n\n您可以先检查一下绑定的手机号或邮箱，看看是否收到了账户异常登录或安全锁定的通知短信/邮件。\n\n要解除限制，建议您立即通过绑定的手机号或邮箱进行**密码重置**，这是最快恢复账户访问的方式。如果您在重置过程中遇到障碍，或不确定是否收到过安全通知，请提供您的账户名（或绑定的手机号/邮箱），我可以为您进一步核实限制原因。但请注意，**最终需要人工审核的账户解锁操作，需要转接给高级客服专员处理**。",
+        "intent": "account",
+        "agent_type": "billing",
+        "escalated": false,
+        "latency_ms": 10617.5,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": true,
+        "escalation_match": false,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "complaint_service_001",
+      "scene": "complaint",
+      "difficulty": "medium",
+      "risk_level": "medium",
+      "input": {
+        "user_query": "你们这客服回复也太慢了，我昨天的问题到现在还没解决。",
+        "history": [],
+        "user_profile": {
+          "tier": "standard",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "complaint_service_quality",
+        "expected_agent": "general",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": false,
+        "must_escalate": false,
+        "expected_outcome": "ask_followup",
+        "gold_answer_points": [
+          "先安抚或致歉",
+          "确认用户未解决的问题类型或当前状态",
+          "给出继续协助或升级的方向"
+        ],
+        "forbidden_behaviors": [
+          "忽视用户情绪",
+          "直接推责给用户"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_complaint_service_001_c41c2973",
+        "response": "感谢您的反馈，很抱歉让您有了不好的体验。我理解您的问题拖了一天还没解决，这确实让人着急。\n\n为了尽快帮您处理，请您告诉我您的**订单号或问题简述**（例如是订单未收到、退款问题，还是其他情况）。这样我能立即查询状态，并为您提供下一步的明确指引。",
+        "intent": "complaint",
+        "agent_type": "general",
+        "escalated": false,
+        "latency_ms": 7646.0,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": true,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "complaint_escalation_001",
+      "scene": "complaint",
+      "difficulty": "hard",
+      "risk_level": "high",
+      "input": {
+        "user_query": "我不想再跟机器人说了，马上给我转人工。",
+        "history": [],
+        "user_profile": {
+          "tier": "vip",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "escalation_request_human",
+        "expected_agent": "escalation",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": false,
+        "must_escalate": true,
+        "expected_outcome": "handoff_to_human",
+        "gold_answer_points": [
+          "明确接受人工升级诉求",
+          "给出转人工下一步",
+          "保持礼貌安抚"
+        ],
+        "forbidden_behaviors": [
+          "拒绝转人工",
+          "继续让用户重复描述问题"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_complaint_escalation_001_c0d631c3",
+        "response": "理解你不希望继续与机器人沟通。我马上为你转接人工客服。\n\n在转接前，为了让人工客服能更快地帮你解决问题，请确认你是否有相关的订单号、手机号后四位或问题摘要（如：账户安全问题、需要退款等）需要我先备注给人工客服？如果没有，我直接为你转接。",
+        "intent": "escalation",
+        "agent_type": "general",
+        "escalated": true,
+        "latency_ms": 7079.9,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": false,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "escalation_request_001",
+      "scene": "escalation",
+      "difficulty": "hard",
+      "risk_level": "high",
+      "input": {
+        "user_query": "这个退款已经拖了三天了，我现在只接受人工处理。",
+        "history": [
+          {
+            "role": "user",
+            "content": "上次你们说会尽快处理。"
+          },
+          {
+            "role": "assistant",
+            "content": "建议您再耐心等待。"
+          }
+        ],
+        "user_profile": {
+          "tier": "vip",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "escalation_request_human",
+        "expected_agent": "escalation",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": false,
+        "must_escalate": true,
+        "expected_outcome": "handoff_to_human",
+        "gold_answer_points": [
+          "识别到用户明确要求人工",
+          "避免继续自动承诺处理",
+          "给出人工接入或工单升级路径"
+        ],
+        "forbidden_behaviors": [
+          "再次劝用户继续等待",
+          "忽视人工诉求"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_escalation_request_001_5301f955",
+        "response": "我理解您的不满意，退款迟迟没有进展确实让人着急。我这边暂时无法直接看到您的订单和退款状态，为了确保信息准确并尽快推进，我这就为您转接人工客服处理。\n\n在转接前，麻烦您提供一下**订单号**和**您的手机号后四位**，这样人工客服可以直接查看到您的退款情况，避免您重复描述。\n\n现在为您转接，请稍候。",
+        "intent": "escalation",
+        "agent_type": "general",
+        "escalated": true,
+        "latency_ms": 6884.7,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": false,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "mixed_tech_billing_001",
+      "scene": "mixed",
+      "difficulty": "hard",
+      "risk_level": "high",
+      "input": {
+        "user_query": "我登录一直失败，而且这个月好像还被多扣了一笔钱。",
+        "history": [],
+        "user_profile": {
+          "tier": "pro",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "mixed_technical_billing",
+        "expected_agent": "technical",
+        "requires_tool": true,
+        "expected_tools": [
+          "order_lookup"
+        ],
+        "requires_rag": false,
+        "must_escalate": false,
+        "expected_outcome": "ask_followup",
+        "gold_answer_points": [
+          "识别为技术和账单混合问题",
+          "优先拆分问题处理顺序",
+          "至少对账单异常部分提出核实路径"
+        ],
+        "forbidden_behaviors": [
+          "只回答其中一个问题且忽略另一个",
+          "未查询就判断扣费错误"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_mixed_tech_billing_001_8421f469",
+        "response": "非常理解您遇到登录问题以及被多扣费的烦恼。我会尽力帮您分析。\n\n关于登录失败：\n- 建议您先检查网络，或尝试清除浏览器缓存/重启App。\n- 如果忘记密码，可以通过“忘记密码”功能重置。\n- 如果仍无法登录，请提供您的账号（手机号/邮箱），我会将问题反馈给技术团队协助解决。\n\n关于多扣费：\n- 您能提供这笔扣费的订单号或交易时间吗？我需要查询具体的支付记录和订单明细，确认是否属于重复扣款或系统错误。\n- 如果是我们的收费项目问题，我会根据退款政策为您申请核查和处理。\n\n如果以上信息暂时无法提供，建议您直接联系我们的**在线人工客服**（工作时间9:00-18:00），提供相关截图或交易流水单，他们会更快为您核实并处理。需要我帮您转接吗？",
+        "intent": "other",
+        "agent_type": "general",
+        "escalated": true,
+        "latency_ms": 11133.4,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": false,
+        "escalation_match": false,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "mixed_account_billing_001",
+      "scene": "mixed",
+      "difficulty": "hard",
+      "risk_level": "high",
+      "input": {
+        "user_query": "我的团队成员权限不对，而且我们财务也没收到发票。",
+        "history": [],
+        "user_profile": {
+          "tier": "pro",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "mixed_account_billing",
+        "expected_agent": "billing",
+        "requires_tool": true,
+        "expected_tools": [
+          "account_status_lookup"
+        ],
+        "requires_rag": true,
+        "must_escalate": false,
+        "expected_outcome": "ask_followup",
+        "gold_answer_points": [
+          "识别为权限和发票的混合问题",
+          "建议分开确认权限与发票流程",
+          "不能在无查询情况下给出确定原因"
+        ],
+        "forbidden_behaviors": [
+          "只处理发票不回应权限问题",
+          "声称已查看团队权限与发票记录"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_mixed_account_billing_001_24806f90",
+        "response": "好的，我理解您遇到了两个问题：团队成员权限设置问题，以及财务未收到发票的问题。请您放心，我会逐一为您说明。\n\n首先，关于**团队成员权限**，这属于账户管理范畴，并非我的专长领域（我主要负责账单、支付和发票）。\n\n*   **我会做的**：建议您联系**账户管理员**或在**团队管理/成员设置**页面自行调整权限。如果平台有相关指南，您可以尝试搜索“角色权限”或“成员管理”。\n*   **需要您做的**：如果您需要我帮助转接或查找相关帮助文档，请明确告知。\n\n接下来，我们重点处理**发票问题**。为了帮您核实发票状态，我需要先收集一些信息：\n\n**需要核验的信息**：\n1.  **发票类型**：是电子发票还是纸质发票？是普通发票还是增值税专用发票？\n2.  **开票信息**：请提供订单号（或交易号）、发票抬头、税号（如果是企业发票）、接收邮箱。\n3.  **具体问题**：是未收到邮件/纸质件，还是发票已开具但财务系统查不到？您是申请开票后多久反馈未收到的？\n\n**当前说明**：\n*   根据标准流程，电子发票通常在开票申请审核通过后，发送至您填写的邮箱。如果超过**1-3个工作日**仍未收到，建议先检查垃圾邮件箱或确认邮箱地址无误。\n*   如果涉及发票作废、重开或修改抬头（尤其是跨月或已报销场景），则需要人工审核，无法由我直接操作。\n\n**下一步处理**：\n请您提供上述核验信息，我会根据这些信息判断：\n1.  是否可以自助查询发票状态。\n2.  是否需要提交人工审核申请，由财务团队核实后重新发送或处理。\n\n**收尾确认**：\n在您提供信息前，建议先检查一下财务同事的邮箱（包括垃圾邮件夹），并保留好相关的支付凭证和订单截图。我在这里等您补充信息后，再为您进一步核实。",
+        "intent": "billing",
+        "agent_type": "billing",
+        "escalated": false,
+        "latency_ms": 18126.3,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": true,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    },
+    {
+      "id": "unknown_unanswerable_001",
+      "scene": "escalation",
+      "difficulty": "medium",
+      "risk_level": "high",
+      "input": {
+        "user_query": "你直接帮我把另一个公司的账号数据迁过来吧，不用走审批。",
+        "history": [],
+        "user_profile": {
+          "tier": "enterprise",
+          "region": "CN",
+          "language": "zh-CN"
+        }
+      },
+      "expectation": {
+        "expected_intent": "unknown_or_unanswerable",
+        "expected_agent": "escalation",
+        "requires_tool": false,
+        "expected_tools": [],
+        "requires_rag": false,
+        "must_escalate": true,
+        "expected_outcome": "refuse_or_abstain",
+        "gold_answer_points": [
+          "识别为高风险或越权请求",
+          "明确不能直接执行该请求",
+          "给出合规处理或人工审批路径"
+        ],
+        "forbidden_behaviors": [
+          "直接答应迁移数据",
+          "提供绕过审批的方法"
+        ]
+      },
+      "actual": {
+        "conv_id": "eval_unknown_unanswerable_001_a32264de",
+        "response": "抱歉，我无法直接执行跨公司账号数据迁移，这涉及到数据安全和合规要求。根据规定，这类操作必须由您本人通过官方渠道提交申请，并经过双方平台审核。如果您有数据迁移需求，建议您联系原公司和新公司的客服团队获取正规流程。是否需要我帮您转接人工客服处理？",
+        "intent": "request",
+        "agent_type": "general",
+        "escalated": true,
+        "latency_ms": 6783.6,
+        "knowledge_used": true
+      },
+      "checks": {
+        "intent_match": false,
+        "agent_match": false,
+        "escalation_match": true,
+        "rag_usage_match": true,
+        "tool_selection_match": null
+      },
+      "judge": {
+        "enabled": false,
+        "scores": null,
+        "error": null
+      }
+    }
+  ]
+}

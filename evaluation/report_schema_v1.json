@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://echomind.local/schemas/eval-report-v1.json",
+  "title": "EchoMind Eval Report V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "report_name",
+    "generated_at",
+    "dataset",
+    "runtime",
+    "metrics",
+    "summary",
+    "cases"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "echomind.eval_report.v1"
+    },
+    "report_name": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "dataset": {
+      "type": "object",
+      "required": ["name", "path", "case_count"],
+      "properties": {
+        "name": {"type": "string"},
+        "path": {"type": "string"},
+        "case_count": {"type": "integer"}
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "required": ["base_url", "health_status", "judge_enabled", "judge_model"],
+      "properties": {
+        "base_url": {"type": "string"},
+        "health_status": {"type": ["string", "null"]},
+        "judge_enabled": {"type": "boolean"},
+        "judge_model": {"type": ["string", "null"]}
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "required": [
+        "intent_accuracy",
+        "agent_routing_accuracy",
+        "escalation_accuracy",
+        "rag_usage_recall",
+        "tool_selection_accuracy",
+        "task_completion_rate",
+        "grounded_response_rate",
+        "avg_latency_ms",
+        "p95_latency_ms",
+        "avg_tokens_per_session",
+        "tool_success_rate"
+      ],
+      "properties": {
+        "intent_accuracy": {"type": ["number", "null"]},
+        "agent_routing_accuracy": {"type": ["number", "null"]},
+        "escalation_accuracy": {"type": ["number", "null"]},
+        "rag_usage_recall": {"type": ["number", "null"]},
+        "tool_selection_accuracy": {"type": ["number", "null"]},
+        "task_completion_rate": {"type": ["number", "null"]},
+        "grounded_response_rate": {"type": ["number", "null"]},
+        "avg_latency_ms": {"type": ["number", "null"]},
+        "p95_latency_ms": {"type": ["number", "null"]},
+        "avg_tokens_per_session": {"type": ["number", "null"]},
+        "tool_success_rate": {"type": ["number", "null"]},
+        "judge_point_coverage": {"type": ["number", "null"]},
+        "judge_outcome_match": {"type": ["number", "null"]},
+        "judge_safety": {"type": ["number", "null"]},
+        "judge_overall": {"type": ["number", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "total_cases",
+        "scenes",
+        "unsupported_metrics",
+        "failed_case_count",
+        "failed_cases_preview",
+        "metrics_ready_for_comparison"
+      ],
+      "properties": {
+        "total_cases": {"type": "integer"},
+        "scenes": {
+          "type": "object",
+          "additionalProperties": {"type": "integer"}
+        },
+        "unsupported_metrics": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "failed_case_count": {"type": "integer"},
+        "failed_cases_preview": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "scene", "actual_intent", "actual_agent", "actual_escalated"],
+            "properties": {
+              "id": {"type": "string"},
+              "scene": {"type": "string"},
+              "actual_intent": {"type": "string"},
+              "actual_agent": {"type": "string"},
+              "actual_escalated": {"type": "boolean"}
+            }
+          }
+        },
+        "metrics_ready_for_comparison": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "scene",
+          "difficulty",
+          "risk_level",
+          "input",
+          "expectation",
+          "actual",
+          "checks",
+          "judge"
+        ],
+        "properties": {
+          "id": {"type": "string"},
+          "scene": {"type": "string"},
+          "difficulty": {"type": "string"},
+          "risk_level": {"type": "string"},
+          "input": {"type": "object"},
+          "expectation": {"type": "object"},
+          "actual": {"type": "object"},
+          "checks": {"type": "object"},
+          "judge": {"type": "object"}
+        }
+      }
+    }
+  }
+}
