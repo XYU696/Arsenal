@@ -1,6 +1,6 @@
-# EchoMind — 企业级智能客服 Agent 平台
+# Salvo — 企业级智能客服 Agent 平台
 
-EchoMind 是一个面向**电商售后场景**的智能客服 Agent 平台。它以 LangGraph 受控单 Agent 为核心，把「意图识别 → 记忆上下文 → Agent 推理 → 工具调用（业务库 / RAG 知识库）→ 转人工工单 → 监控反馈 → 自动评测」串成完整闭环，并提供独立的前端控制台与 Docker 一键部署。
+Salvo 是一个面向**电商售后场景**的智能客服 Agent 平台。它以 LangGraph 受控单 Agent 为核心，把「意图识别 → 记忆上下文 → Agent 推理 → 工具调用（业务库 / RAG 知识库）→ 转人工工单 → 监控反馈 → 自动评测」串成完整闭环，并提供独立的前端控制台与 Docker 一键部署。
 
 > 定位说明：当前实现的是**受控单 Agent（ReAct 循环 + 工具调用）**，而非自治式多 Agent 协作；业务复杂度通过意图路由、任务白名单和工具集收敛，更贴近企业客服的真实可控性要求。
 
@@ -190,7 +190,7 @@ docker compose run --rm --no-deps -v $PWD/evaluation:/app/evaluation echomind \
 ## 目录结构
 
 ```text
-EchoMind/
+Salvo/
 ├── api/                    # FastAPI 入口、工具注册、/chat 主链路
 ├── agents/                 # LangGraph Runtime、会话状态、编排器
 ├── core/                   # 意图识别、LLM 兼容工具、Skills 加载
